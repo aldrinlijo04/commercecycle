@@ -1,5 +1,16 @@
 const sequelize = require("../config/db");
 
+// Test database connection
+(async () => {
+    try {
+      await sequelize.authenticate();
+      console.log("✅ Database connection has been established successfully.");
+    } catch (error) {
+      console.error("❌ Unable to connect to the database:", error);
+    }
+  })();
+  
+
 // Import all models
 const Business = require("./Business");
 const Demand = require("./demand");
@@ -68,3 +79,4 @@ module.exports = {
   ProductTag,
   Location
 };
+

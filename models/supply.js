@@ -1,10 +1,12 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require("../config/database");
+const sequelize = require("../config/db");
 
 const Supply = sequelize.define("Supply", {
   supply_id: {
     type: DataTypes.INTEGER,
-    primaryKey: true
+    primaryKey: true,
+    autoIncrement: true, // 🔥 This is the key line!
+      allowNull: false
   },
   business_id: DataTypes.INTEGER,
   product_id: DataTypes.INTEGER,
