@@ -1,0 +1,27 @@
+{
+  "name": "commercecycle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "newdev": "node --watch --env-file=.env --experimental-strip-types --experimental-sqlite ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldrinlijo04/commercecycle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldrinlijo04/commercecycle/issues"
+  },
+  "homepage": "https://github.com/aldrinlijo04/commercecycle#readme",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.0",
+    "sequelize": "^6.37.7"
+  }
+}
