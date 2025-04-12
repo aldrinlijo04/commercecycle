@@ -16,6 +16,13 @@ app.use("/api/supplies", supplyRoutes);
 const businessRoutes = require("../routes/business.routes");
 app.use("/api/businesses", businessRoutes);
 
+// demand
+const bodyParser = require("body-parser");
+const demandRoutes = require("../routes/demand.routes");
+
+app.use(bodyParser.json()); // Parse incoming JSON data
+app.use("/api/demands", demandRoutes); // Add demand routes
+
 // Load and test DB connection
 require("../models"); 
 
