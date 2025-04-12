@@ -15,6 +15,9 @@ app.use("/api/supplies", supplyRoutes);
 // business
 const businessRoutes = require("../routes/business.routes");
 app.use("/api/businesses", businessRoutes);
+// exchange
+const exchangeRoutes = require("../routes/exchange.routes");
+app.use("/api/exchange", exchangeRoutes);
 
 // Load and test DB connection
 require("../models"); 
