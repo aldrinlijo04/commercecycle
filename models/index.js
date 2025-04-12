@@ -1,3 +1,4 @@
+const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require("../config/db");
 
 // Test database connection
@@ -12,7 +13,7 @@ const sequelize = require("../config/db");
   
 
 // Import all models
-const Business = require("./Business");
+const Business = require("./Business")(sequelize, DataTypes);
 const Demand = require("./demand");
 const Supply = require("./supply");
 const Product = require("./product");
