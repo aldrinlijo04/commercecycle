@@ -23,6 +23,11 @@ app.use("/api/exchange", exchangeRoutes);
 const bodyParser = require("body-parser");
 const demandRoutes = require("../routes/demand.routes");
 
+//location
+const locationRoutes = require("../routes/location.routes");
+app.use("/api/locations", locationRoutes);
+
+
 app.use(bodyParser.json()); // Parse incoming JSON data
 app.use("/api/demands", demandRoutes); // Add demand routes
 
