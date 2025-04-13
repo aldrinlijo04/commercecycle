@@ -5,7 +5,11 @@ const sequelize = require("../config/db");
 const ProductTag = sequelize.define("ProductTag", {
   product_id: {
     type: DataTypes.INTEGER,
-    primaryKey: true
+    primaryKey: true,
+    references: {
+        model: "products",
+        key: "product_id"
+      }
   },
   tag_id: {
     type: DataTypes.INTEGER,

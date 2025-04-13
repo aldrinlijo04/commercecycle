@@ -6,6 +6,14 @@ const Location = sequelize.define("Location", {
     type: DataTypes.INTEGER,
     primaryKey: true
   },
+  business_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: "businesses",
+      key: "business_id"
+    }
+  },
+  
   city: {
     type: DataTypes.STRING(100),
     allowNull: true

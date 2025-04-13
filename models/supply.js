@@ -8,8 +8,22 @@ const Supply = sequelize.define("Supply", {
     autoIncrement: true, // 🔥 This is the key line!
       allowNull: false
   },
-  business_id: DataTypes.INTEGER,
-  product_id: DataTypes.INTEGER,
+  business_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "businesses",
+      key: "business_id"
+    }
+  },
+  product_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "products",
+      key: "product_id"
+    }
+  },
   quantity: DataTypes.DECIMAL(10, 2),
   unit: DataTypes.STRING,
   available_from: DataTypes.DATE,
