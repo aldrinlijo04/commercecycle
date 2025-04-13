@@ -23,6 +23,15 @@ app.use("/api/exchange", exchangeRoutes);
 const bodyParser = require("body-parser");
 const demandRoutes = require("../routes/demand.routes");
 
+// product
+const productRoutes = require("../routes/products.routes");
+app.use("/api/products", productRoutes);
+
+// product category
+const productCategoryRoutes = require("../routes/productcategory.routes");
+app.use("/api/productcategories", productCategoryRoutes);
+
+
 app.use(bodyParser.json()); // Parse incoming JSON data
 app.use("/api/demands", demandRoutes); // Add demand routes
 
