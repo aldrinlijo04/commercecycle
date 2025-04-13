@@ -27,6 +27,11 @@ const demandRoutes = require("../routes/demand.routes");
 const locationRoutes = require("../routes/location.routes");
 app.use("/api/locations", locationRoutes);
 
+// tag
+const tagRoutes = require("../routes/tag.routes");
+app.use("/api/tags", tagRoutes);
+
+
 
 app.use(bodyParser.json()); // Parse incoming JSON data
 app.use("/api/demands", demandRoutes); // Add demand routes
